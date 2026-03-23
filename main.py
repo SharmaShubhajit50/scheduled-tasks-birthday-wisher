@@ -27,8 +27,8 @@ birthday_list = birth_day_info.month.to_list() + birth_day_info.day.to_list() + 
 birthday_dict = {(row.month, row.day): row for (index, row) in birth_day_info.iterrows()}
 
 
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL")
-SENDER_PASS = MY_PASSWORD = os.environ.get("SENDER_PASSWORD")
+SENDER_EMAIL = os.environ.get("MY_EMAIL")
+SENDER_PASS = MY_PASSWORD = os.environ.get("MY_PASSWORD")
 try:
     RECEIVER_EMAIL = birthday_dict[today_tuple]["email"]
 except KeyError:
